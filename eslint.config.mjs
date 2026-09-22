@@ -14,8 +14,6 @@ export default defineConfig([
     rules: {
       // The config files import ESLint and its plugins, which are peer or dev dependencies
       'import-x/no-extraneous-dependencies': 'off',
-      // Node ESM resolves the exact file, so the explicit file name is not a useless segment
-      'import-x/no-useless-path-segments': 'off',
     },
   },
 ]);

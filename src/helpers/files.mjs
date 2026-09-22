@@ -22,3 +22,13 @@ const reactGroup = group([...jsExtensionsWithReact, ...tsExtensionsWithReact]);
 export const devDependencies = helpers
   .getDevDepsList('javascript')
   .map((pattern) => pattern.replaceAll(upstreamGroup, reactGroup));
+
+// Test files, the subset of the patterns above that is about tests rather than tooling configs
+export const testFiles = [
+  'test/**',
+  'tests/**',
+  'spec/**',
+  '**/__tests__/**',
+  '**/__mocks__/**',
+  `**/*{.,_}{test,spec}.${reactGroup}`,
+];
