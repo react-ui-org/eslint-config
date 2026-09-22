@@ -1,4 +1,4 @@
-import { devDependencies } from '../helpers/devDependencies.mjs';
+import { devDependencies } from '../helpers/files.mjs';
 
 /*
  * Overrides of `eslint-config-airbnb-extended` and `eslint-plugin-promise`
@@ -41,6 +41,14 @@ export default {
   }],
   // Renaming a default import is common and harmless, e.g. `import en from './translations/en'`
   'import-x/no-rename-default': 'off',
+  /*
+   * airbnb-extended turns on `noUselessIndex`, which asks for `./src` instead of `./src/index.mjs`.
+   * Node ESM resolves no directories, and `import-x/extensions` above requires the `.mjs` extension.
+   */
+  'import-x/no-useless-path-segments': ['error', {
+    commonjs: true,
+    noUselessIndex: false,
+  }],
   'import-x/order': ['error', {
     groups: ['builtin', 'external', 'internal', 'parent', 'sibling', 'index'],
   }],
