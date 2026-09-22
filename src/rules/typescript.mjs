@@ -5,7 +5,7 @@
  * (`@typescript-eslint/member-ordering` sorts by kind of member). That is what
  * `eslint-plugin-perfectionist` is here for.
  */
-import { devDependencies } from '../helpers/devDependencies.mjs';
+import { devDependencies } from '../helpers/files.mjs';
 
 export default {
   '@typescript-eslint/consistent-type-definitions': ['error', 'type'],
