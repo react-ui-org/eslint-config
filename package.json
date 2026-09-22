@@ -1,0 +1,75 @@
+{
+  "name": "@react-ui-org/eslint-config",
+  "description": "Shareable ESLint config for JavaScript, TypeScript and React projects.",
+  "version": "1.0.0",
+  "keywords": [
+    "eslint",
+    "eslintconfig",
+    "config",
+    "javascript",
+    "typescript",
+    "react",
+    "styleguide",
+    "react-ui"
+  ],
+  "homepage": "https://github.com/react-ui-org/eslint-config",
+  "author": "The React UI Authors (https://github.com/react-ui-org/eslint-config/graphs/contributors)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/react-ui-org/eslint-config/issues"
+  },
+  "type": "module",
+  "exports": {
+    ".": "./src/index.mjs",
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "src",
+    "!src/docs"
+  ],
+  "publishConfig": {
+    "access": "public"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/react-ui-org/eslint-config"
+  },
+  "engines": {
+    "node": ">=22.11.0"
+  },
+  "devEngines": {
+    "runtime": {
+      "name": "node",
+      "version": "^22.23.0 || ^24.20.0",
+      "onFail": "error"
+    },
+    "packageManager": {
+      "name": "npm",
+      "version": "^11.19.0",
+      "onFail": "error"
+    }
+  },
+  "scripts": {
+    "eslint": "eslint .",
+    "eslint:fix": "eslint . --fix",
+    "inspect": "npx --yes @eslint/config-inspector --config inspect.config.mjs",
+    "lint": "npm run eslint && npm run markdownlint",
+    "markdownlint": "markdownlint-cli2 \"README.md\" \"src/**/*.md\""
+  },
+  "dependencies": {
+    "eslint-config-airbnb-extended": "^3.2.0",
+    "eslint-plugin-perfectionist": "^5.11.0",
+    "eslint-plugin-promise": "^7.3.0",
+    "globals": "^17.8.0",
+    "typescript-eslint": "^8.70.0"
+  },
+  "peerDependencies": {
+    "eslint": "^9.22.0",
+    "typescript": ">=5.0.0 <6.1.0"
+  },
+  "devDependencies": {
+    "eslint": "^9.39.5",
+    "markdownlint-cli2": "^0.23.2",
+    "typescript": "^6.0.3"
+  }
+}
