@@ -9,6 +9,21 @@ and other community configs and adds a few stricter rules of its own.
 
 Flat config only, ESLint 9. Legacy `.eslintrc*` files are not supported.
 
+## Sponsors
+
+<p>
+    <br />
+    <a href="https://www.racom.eu">
+      <img src="public/racom.svg" width="190" height="30" alt="RACOM" />
+    </a>
+    <br />
+    <br />
+</p>
+
+> Development of this project is largely supported by
+> [RACOM]—one of the leading global players in wireless
+> Critical Infrastructure.
+
 ## Installation
 
 ```sh
@@ -77,3 +92,5 @@ change. All contributions must pass linting before being merged.
 The release process is fully automated. If you plan to release a new version,
 please follow the [Releasing Guide](./src/docs/releasing.md), which explains
 the version bump and how the changelog is assembled.
+
+[RACOM]: https://www.racom.eu
