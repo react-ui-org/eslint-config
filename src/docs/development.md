@@ -4,13 +4,13 @@ No build step, `src` is published as it is. The package supports Node 24.22.3 an
 newer, and Node 26.13.1 and newer; development uses the versions in `devEngines`
 and [`.nvmrc`](../../.nvmrc).
 
-| Command                | Purpose                                              |
-|------------------------|------------------------------------------------------|
-| `npm run eslint`       | Lint the package with its own base config            |
-| `npm run eslint:fix`   | The same with autofix                                |
-| `npm run markdownlint` | Lint the documentation                               |
-| `npm run lint`         | Both of the above, what CI runs                      |
-| `npm run inspect`      | Browse the whole exported config at `localhost:7777` |
+| Command                     | Purpose                                              |
+|-----------------------------|------------------------------------------------------|
+| `npm run lint:eslint`       | Lint the package with its own base config            |
+| `npm run lint:eslint:fix`   | The same with autofix                                |
+| `npm run lint:markdownlint` | Lint the Markdown files                              |
+| `npm run lint`              | Both linters, what CI runs                           |
+| `npm run inspect`           | Browse the whole exported config at `localhost:7777` |
 
 ## Exploring the config
 

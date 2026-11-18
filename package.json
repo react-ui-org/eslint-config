@@ -50,11 +50,11 @@
     }
   },
   "scripts": {
-    "eslint": "eslint .",
-    "eslint:fix": "eslint . --fix",
     "inspect": "npx --yes @eslint/config-inspector --config inspect.config.mjs",
-    "lint": "npm run eslint && npm run markdownlint",
-    "markdownlint": "markdownlint-cli2 \"README.md\" \"src/**/*.md\""
+    "lint": "npm run lint:eslint && npm run lint:markdownlint",
+    "lint:eslint": "eslint",
+    "lint:eslint:fix": "eslint --fix",
+    "lint:markdownlint": "markdownlint-cli2"
   },
   "dependencies": {
     "eslint-config-airbnb-extended": "^3.2.0",
